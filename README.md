@@ -29,3 +29,5 @@ A basic Texting App
 -   For new user, sign up button is not set
 -   seed.db file to be modified for new user and run run seed command in terminal
 -   more Databases to be added
+
+*   Ruby on rails is used :)
