@@ -47,6 +47,7 @@ GEM
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
+    bcrypt (3.1.13)
     bindex (0.8.1)
     bootsnap (1.4.6)
       msgpack (~> 1.0)
@@ -70,7 +71,7 @@ GEM
     coffee-script (2.4.1)
       coffee-script-source
       execjs
-    coffee-script-source (1.12.2)
+    coffee-script-source (1.8.0)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
     erubi (1.9.0)
@@ -78,6 +79,7 @@ GEM
     ffi (1.12.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    hirb (0.7.3)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     io-like (0.3.1)
@@ -110,6 +112,8 @@ GEM
     public_suffix (4.0.4)
     puma (3.12.4)
     rack (2.2.2)
+    rack-proxy (0.6.5)
+      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.4.2)
@@ -140,6 +144,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    rb-readline (0.5.5)
     regexp_parser (1.7.0)
     ruby_dep (1.5.0)
     rubyzip (2.3.0)
@@ -186,6 +191,10 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
+    webpacker (4.2.2)
+      activesupport (>= 4.2)
+      rack-proxy (>= 0.6.1)
+      railties (>= 4.2)
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
@@ -196,16 +205,20 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  coffee-script-source (= 1.8.0)
+  hirb
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.11)
   rails (~> 5.2.4)
+  rb-readline
   sass-rails (~> 5.0)
   selenium-webdriver
   semantic-ui-sass
@@ -216,6 +229,7 @@ DEPENDENCIES
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
+  webpacker (~> 4.x)
 
 RUBY VERSION
    ruby 2.6.5p114
